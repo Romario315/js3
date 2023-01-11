@@ -74,10 +74,12 @@ let myMax = (arg) => Math.max.apply(Math, arg);
 let list = [12, 23, 100, 34, 56, 9, 233];
 console.log(myMax(list));
 
-let myNull = (a, b) => a * b;
-let myDouble = myNull.bind(null, 2);
+function myMul(a, b) {
+  return a * b;
+}
+let myDouble = myMul.bind(null, 2);
 console.log(myDouble(3));
-let myTriple = myNull.bind(null, 3);
+let myTriple = myMul.bind(null, 3);
 console.log(myTriple(3));
 
 let myUniq = (arr) => {
